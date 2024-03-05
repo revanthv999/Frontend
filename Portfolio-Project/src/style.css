@@ -1,0 +1,572 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #0a015d;
+    border-radius: 1000px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #04002A;
+}
+
+body{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,0,98,1) 100%);
+  background-repeat: no-repeat;
+}
+
+nav{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(3px);
+}
+
+ul.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    list-style-type: none;
+}
+
+/* li.navItem{
+    font-weight: 200;
+    font-size: 14px;
+    color: #D5D5D5;    
+} */
+
+li.navItem > a{
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+    color: #D5D5D5;    
+    text-decoration: none;
+}
+
+
+h3.logo > a{
+    font-weight: 200;
+    font-size: 16px;
+    color: #D5D5D5;
+    text-decoration: none;
+}
+
+
+main{
+    height: 100vh;
+    padding: 12rem 4rem;
+    position: relative;
+}
+
+.webDeveloper {
+    font-family: "Crimson Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+    font-size: 200px;
+    line-height: 175px;
+}
+
+main h2.name{
+    color: #E0E0E0;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+main img.star{
+    position: absolute;
+    right: 10%;
+    top: 12%;
+}
+
+section.aboutContainer{
+    padding: 6rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.about{
+    width: 410px;
+    height: 600px;
+    border-radius: 27px;
+    background-image: url("../images/profile_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 5px solid #1400FF;
+    position: relative;
+    margin: auto;
+    inset: 0;
+}
+
+section.about h2.hello{
+    font-size: 76px;
+    font-weight: 600;
+    position: absolute;
+    color: white;
+    left: -40%;
+    top: -5%;
+}
+
+section.about p.aboutInfo{
+    color: #C3C3C3;
+    font-size: 20px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    min-width: 540px;
+    max-width: fit-content;
+    line-height: 30px;
+}
+
+section.about img.profilePhoto{
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 900px; 
+}
+
+span.aboutName{
+    color: #1400FF;
+}
+
+
+section.skills{
+    padding: 4rem;
+    color: white;
+}
+
+section.skills h2.skillsHeading{
+    font-weight: 600;
+    font-size: 42px;
+    padding: 2rem 0px;
+    display: block;
+    width: 100%;
+}
+
+section.skills .skillsCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    gap: 12rem;
+    width: 100%;
+}
+
+.skillsCard{
+    padding: 2.5rem;
+    background: linear-gradient(188deg, rgba(0,0,0,1) 0%, rgb(4, 0, 129) 100%);
+    border: 5px solid #1400FF;
+    border-radius: 30px;
+    height: 100%;
+    min-height: fit-content;
+}
+
+.skillsCardHeading{
+    font-size: 28px;
+    display: inline-block;
+}
+
+.skillsCardInfo{
+    color: #cdcdcd;
+    padding: 1rem  0rem 0rem 0rem;
+    line-height: 26px;
+}
+
+.fa-brands{
+    font-size: 28px;
+    padding: 0px 12px 0px 0px;
+}
+
+
+.connect{
+    padding: 4rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12rem;
+}
+
+.connectHeading{
+    font-size: 42px;
+    color: white;
+}
+
+.connectInfo{
+    padding: 1rem 0rem;
+    line-height: 26px;
+}
+
+.connectForm{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 0.5rem;
+}
+
+.connectFormInput, .connectFormMessage{
+    width: 100%;
+    background-color: #04002A;
+    outline: none;
+    border: 1px solid #1400FF;
+    border-radius: 5px;
+    padding: 1rem 1.4rem;
+    height: fit-content;
+    font-family: 'Lexend';
+    color: white;
+}
+
+.connectFormMessage{
+    height: 100%;
+    text-align: left;
+}
+
+.connectFormSend{
+    width: 100%;
+    background: linear-gradient(188deg, rgba(0,0,0,1) 0%, rgb(4, 0, 129) 100%);
+    outline: none;
+    border: 1px solid #1400FF;
+    border-radius: 5px;
+    padding: 1rem 1.4rem;
+    height: fit-content;
+    font-family: 'Lexend';
+    color: white;
+    cursor: pointer;
+    margin: 0.5rem 0rem 0rem 0rem;
+    font-size: 16px;
+}
+
+
+@media (max-width: 1100px) {
+    .webDeveloper{
+        font-size: 160px;
+        line-height: 140px;
+    }
+
+    section.skills .skillsCards, .connect{
+        gap: 8rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    main{
+        height: auto;
+    }
+    .webDeveloper{
+        font-size: 120px;
+        line-height: 100px;
+    }
+
+    main h2.name{
+        font-size: 16px;
+    }
+
+    main img.star{
+        height: 180px;
+    }
+
+    section.skills .skillsCards, .connect{
+        gap: 1rem;
+    }
+
+    section.about h2.hello{
+        font-size: 54px;
+    }
+
+    section.about{
+        width: 310px;
+        height: 500px;
+        border-radius: 27px;
+        background-image: url("../images/profile_background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 5px solid #1400FF;
+        position: relative;
+        margin: auto;
+        inset: 0;
+    }
+
+    section.about p.aboutInfo{
+        font-size: 16px;
+        min-width: 440px;
+        max-width: fit-content;
+        line-height: 26px;
+    }
+    
+    section.about img.profilePhoto{
+        position: absolute;
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 750px; 
+    }
+    
+    section.aboutContainer{
+        height: auto;
+    }
+}
+    
+@media (max-width: 700px) {
+
+    ul.navbar{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        list-style-type: none;
+    }    
+
+    main{
+        height: auto;
+    }
+    .webDeveloper{
+        font-size: 100px;
+        line-height: 80px;
+        text-align: center;
+    }
+
+    main h2.name{
+        font-size: 16px;
+        text-align: center;
+        color: white;
+    }
+
+    main img.star{
+        height: 300px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    section.skills .skillsCards, .connect{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .connect{
+        grid-template-rows: auto 1fr;
+    }
+
+    .connectForm{
+        grid-row-start: 2;
+        grid-row-end: 3
+        ;
+    }
+
+    section.about h2.hello{
+        font-size: 54px;
+        left: -20%;
+    }
+
+    section.about{
+        width: 310px;
+        height: 500px;
+        border-radius: 27px;
+        background-image: url("../images/profile_background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 5px solid #1400FF;
+        position: relative;
+        margin: auto;
+        inset: 0;
+    }
+
+    section.about p.aboutInfo{
+        font-size: 16px;
+        min-width: 400px;
+        max-width: fit-content;
+        line-height: 26px;
+    }
+    
+    section.about img.profilePhoto{
+        position: absolute;
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 750px; 
+    }
+    
+    section.aboutContainer{
+        height: auto;
+    }
+}
+ 
+
+@media (max-width: 700px) {
+
+    ul.navbar{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        list-style-type: none;
+    }    
+
+    main{
+        height: auto;
+    }
+    .webDeveloper{
+        font-size: 75px;
+        line-height: 74px;
+        text-align: center;
+    }
+
+    main h2.name{
+        font-size: 12px;
+        text-align: center;
+        color: white;
+    }
+
+    main img.star{
+        height: 300px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        filter: blur(10px);
+    }
+
+    section.skills .skillsCards, .connect{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .connect{
+        grid-template-rows: auto 1fr;
+        padding-top: 0rem;
+    }
+    
+    .connectForm{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    section.about h2.hello{
+        font-size: 54px;
+        left: -20%;
+    }
+    
+    section.about{
+        width: 310px;
+        height: 500px;
+        border-radius: 27px;
+        background-image: url("../images/profile_background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 5px solid #1400FF;
+        position: relative;
+        margin: auto;
+        inset: 0;
+    }
+    
+    section.about p.aboutInfo{
+        font-size: 16px;
+        min-width: 400px;
+        max-width: fit-content;
+        line-height: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    section.about img.profilePhoto{
+        position: absolute;
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 750px; 
+    }
+    
+    section.aboutContainer{
+        height: auto;
+    }
+    
+    h3.logo > a{
+        font-size: 15px;
+    }
+    
+    li.navItem > a{
+        font-size: 13px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    
+    
+    .webDeveloper{
+        font-size: 55px;
+        line-height: 54px;
+        text-align: center;
+    }
+      
+    
+    section.about p.aboutInfo{
+        font-size: 16px;
+        min-width: 300px;
+        max-width: fit-content;
+        line-height: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    
+    nav{
+        padding: 1rem;
+        width: 100vw;
+    }
+
+    section.aboutContainer{
+        height: auto;
+        padding: 1rem;
+        overflow: visible;
+    }
+
+    section.about h2.hello{
+        font-size: 54px;
+        left: -10%;
+    }
+
+    section.skills{
+        padding: 2rem;
+        color: white;
+    }
+
+    .connect{
+        padding: 2rem;
+    }
+
+    li.navItem > a{
+        font-size: 10px;
+    }
+    
+
+
+}
