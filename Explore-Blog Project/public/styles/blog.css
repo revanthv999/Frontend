@@ -1,0 +1,90 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 5.5rem 14rem;
+    background-color: rgb(251, 249, 249);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(14, 14, 14);
+}
+
+nav{
+    position: fixed;
+    font-size: 2rem;
+    font-weight: 800;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(7px);
+    z-index: 1;
+}
+
+h1{
+    margin: 1rem 0rem;
+    font-size: 4rem;
+    color: rgb(21, 20, 20);
+}
+
+p{
+    line-height: 26px;
+    font-weight: 400;
+    color: rgb(34, 34, 34);
+    padding: 0.6rem 0rem;
+}
+
+span.quote
+{
+    background-color: rgb(225, 225, 225);
+    border-left: 4px solid rgb(122, 122, 122);
+    padding: 1rem 0.5rem;
+    text-wrap: wrap;
+    height: auto;
+    line-height: 26px;
+    display: inline-block;
+}
+
+span.italic{
+    font-style: italic;
+}
+
+@media (max-width: 950px)
+{
+    .container{
+        padding: 5rem 8rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+
+    .container{
+        padding: 5rem 2rem;
+        background-color: rgb(251, 249, 249);
+    }
+
+    a{
+        font-size: 1.7rem;
+        margin: auto;
+    }
+
+    h1{
+        font-size: 42px;
+        color: rgb(32, 32, 32);
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    
+}
