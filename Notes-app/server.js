@@ -44,6 +44,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // db.connect();
 
+let notesData;
+
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
