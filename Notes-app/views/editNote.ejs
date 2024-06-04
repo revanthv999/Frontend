@@ -1,0 +1,33 @@
+<%- include('./partials/header.ejs') %>
+
+<section class="edit-note-section">
+    <form action="/edit/<%=noteData.noteurl%>" method="post">
+        <div class="note-display-btns">
+            <div>
+                <a class="note-display-btns-back new-note-anchor-back" href="/notes"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i> Back</a>
+            </div>
+            <div>
+                <button type="submit"><i class="fa-solid fa-check" style="color: #000000;"></i> Save</button>
+            </div>
+        </div>
+        <label for="editImageInput" class="edit-image-label">
+            <i class="fa-solid fa-image" style="color: #494949;"></i>
+            <input type="text" class="edit-image" onblur="inputChangeHandler()" id="editImageInput" name="imageUrl" style="background-image: url('<%=noteData.imageurl%>');">
+        </label>
+        <p class="label-text">Paste new image url by clicking on the image</p>
+        <input type="text" value="<%=noteData.title%>" name="title" placeholder="Note title" class="edit-input-title">
+        <textarea name="info" placeholder="Start writing here..." class="edit-input-info"><%=noteData.info%></textarea>
+    </form>
+
+</section>
+<script>
+    
+    const inputChangeHandler = () => {
+        const inputChooseImage = document.querySelector(".edit-image");
+
+        const userImageUrl = inputChooseImage.value;
+        inputChooseImage.style.backgroundImage = `url('${userImageUrl}')`;
+    }
+</script>
+
+<%- include('./partials/footer.ejs') %>

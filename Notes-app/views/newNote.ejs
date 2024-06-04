@@ -1,0 +1,32 @@
+<%- include('./partials/header.ejs') %>
+<section class="new-note-section">
+
+    <form action="/newnote" method="post">
+        <div class="note-display-btns">
+            <div>
+                <a class="note-display-btns-back new-note-anchor-back" href="/notes"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i> Back</a>
+            </div>
+            <div>
+                <a class="note-display-btns-save" href="/notes"><button type="submit"><i class="fa-solid fa-check" style="color: #000000;"></i> Save</button></a>
+            </div>
+        </div>
+        <label for="chooseImageInput" class="choose-image-label">
+            <i class="fa-solid fa-image" style="color: #494949;"></i>
+            <p class="label-text">Paste imageUrl</p>
+            <input type="text" class="choose-image" onblur="inputChangeHandler()" id="chooseImageInput" name="imageUrl">
+        </label>
+        <input required type="text" name="title" placeholder="Note title" class="user-input-title">
+        <textarea rows="10" name="info" placeholder="Start writing here..." class="user-input-info"></textarea>
+    </form>
+</section>
+
+<script>
+    
+    const inputChangeHandler = () => {
+        const inputChooseImage = document.querySelector(".choose-image");
+
+        const userImageUrl = inputChooseImage.value;
+        inputChooseImage.style.backgroundImage = `url('${userImageUrl}')`;
+    }
+</script>
+<%- include('./partials/footer.ejs') %>

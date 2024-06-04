@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+
+<section class="note-display-section">
+    <div class="note-display-btns">
+        <div>
+            <a class="note-display-btns-back" href="/notes"><button><i class="fa-solid fa-chevron-left" style="color: #000000;"></i> Back</button></a>
+        </div>
+    </div>
+    <% if (locals.noteData) { %>
+        <div class="note-display-image" style="background-image: url('<%= noteData.imageurl %>');"></div>
+        <h1 class="note-display-title"><%= noteData.title %></h1>
+        <p class="note-display-info"><%= noteData.info %></p>
+    <% } %>
+</section>
+
+<%- include('./partials/footer.ejs') %>

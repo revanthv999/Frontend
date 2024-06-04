@@ -1,0 +1,55 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="notes-container">
+    <section class="general-display">
+        <h1>Good <br><%=locals.wish%></h1>
+        <form action="/newnote">
+            <button class="new-note">New note</button>
+        </form>
+    </section>
+    <section class="notes-display">
+        <div class="notes-list">
+            <% if (locals.notesData) { %>
+                <% for( let i = notesData.length-1; i >= 0; i-- ) { %>
+                    <div class="note">
+                        <div class="note-img" style="background-image: url('<%= notesData[i].imageurl %>');"></div>
+                        <div class="note-content">
+                            <h2 class="note-title"><%= notesData[i].title %></h2>
+                            <p class="note-info"> <%= notesData[i].info.slice(0,250) + "..." %> </p>
+                            <div class="note-content-flex">
+                                <a class="open-note" href="<%=notesData[i].noteurl%>">Open note</a>
+                                <a class="edit-note" href="edit/<%=notesData[i].noteurl%>"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a class="delete-note" href="delete/<%=notesData[i].noteurl%>"><i class="fa-regular fa-trash-can"></i></a>
+
+                                <p class="note-date"><%= notesData[i].date %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </section>
+</div>
+
+
+<script>
+    const noteEl = document.querySelectorAll(".note");
+
+    const editNoteEl = document.querySelectorAll(".edit-note");
+    const deleteNoteEl = document.querySelectorAll(".delete-note");
+
+    noteEl.forEach((note, idx) => {
+        note.addEventListener("mouseover", () => {
+            editNoteEl[idx].style.display = "inline-block";
+            deleteNoteEl[idx].style.display = "inline-block";
+        });
+    });
+
+    noteEl.forEach((note, idx) => {
+        note.addEventListener("mouseout", () => {
+            editNoteEl[idx].style.display = "none";
+            deleteNoteEl[idx].style.display = "none";
+        });
+    });
+</script>
+<%- include('./partials/footer.ejs') %>
