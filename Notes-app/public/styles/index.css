@@ -566,6 +566,7 @@ section.edit-note-section form{
     section.notes-display{
         padding: 0rem 1rem;
         display: flex;
+        height: 80dvh;
     }
 
     .note .note-content .note-title{
