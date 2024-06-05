@@ -1,0 +1,664 @@
+*{
+    font-family: "Inter", sans-serif;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0B0B0B;
+}
+
+
+nav{
+    padding: 1rem;
+}
+
+nav img{
+    height: 2rem;
+}
+
+/* Hero section styles */
+
+section.hero-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section-image img{
+    height: 30rem;
+}
+
+.hero-section-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 40%;
+    max-width: 50%;
+}
+
+.hero-section-content .heading{
+    font-size: 60px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.hero-section-content .sub-heading{
+    font-size: 20px;
+    font-weight: 400;
+    color: #777777;
+    width: 85%;
+}
+
+.hero-section-content form .cta-btn{
+    padding: 1.2rem 1.4rem;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    transition: padding 0.3s;
+    cursor: pointer;    
+}
+
+.hero-section-content form .cta-btn:hover{
+    padding: 1.2rem 1.5rem;
+}
+
+.hero-section-content form .cta-btn span.main{
+    font-weight: 700;
+}
+
+.hero-section-content form .cta-btn span.dash{
+    width: 25px;
+    height: 1px;
+    background-color: black;
+}
+
+.hero-section-content form .cta-btn span.tag{
+    font-weight: 400;
+}
+
+.large-m{
+    position: absolute;
+    color: transparent;
+    font-weight: 900;
+    font-size: 1200px;
+    right: -65%;
+    top: -45%;
+    z-index: -1;
+    -webkit-text-stroke-color: #3B3B3B;
+    -webkit-text-stroke-width: 3px;
+}
+
+
+/* posts section styles */
+
+.notes-container{
+    padding: 1rem 12rem;
+    /* border: 1px solid red; */
+}
+
+section.general-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2E2E2E;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+section.general-display h1{
+    font-weight: 600;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+
+section.general-display button.new-note{
+    padding: 1.4rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+section.notes-display{
+    /* border: 1px solid blue; */
+    margin: 1rem 0rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55dvh;
+}
+
+section.notes-display::-webkit-scrollbar{
+    width: 10px;
+}
+
+section.notes-display::-webkit-scrollbar-track{
+    background-color: #181818;
+}
+
+section.notes-display::-webkit-scrollbar-thumb{
+    background-color: #252525;
+    border-radius: 50px;
+}
+
+section.notes-display .notes-list .note{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    border: 1px solid #2C2C2C;
+    background-color: #111111;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    gap: 1rem;
+    max-width: 1000px;
+}
+
+.note .note-img{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    border-radius: 20px;
+}
+
+.note .note-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.note .note-content .note-title{
+    font-size: 28px;
+    font-weight: 400;
+    color: #DDDDDD;
+}
+
+.note .note-content .note-info{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6B6B6B;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.note .note-content .note-date{
+    font-size: 13px;
+    color: #8C8C8C;
+    font-weight: 400;
+    flex-grow: 2;
+    text-align: right;
+}
+
+.note .note-content .note-content-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.note .note-content .note-content-flex .open-note{
+    text-decoration: none;
+    color: #6a6a6a;
+    padding: 0.6rem 0.8rem;
+    background-color: #252525;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.note .note-content .note-content-flex .edit-note, .delete-note{
+    text-decoration: none;
+    color: #6a6a6a;
+    padding: 0.6rem 0.8rem;
+    background-color: #252525;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: none;
+    border: none;
+    outline: none;
+}
+
+
+/* note display section styles */
+
+.note-display-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1.5rem;
+    /* border: 1px solid red; */
+    padding: 2rem 20rem;
+}
+
+.note-display-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-display-btns button{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1rem 1.8rem;
+    color: black;
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.note-display-image{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.note-display-title{
+    font-size: 32px;
+    font-weight: 600;
+    color: #BABABA;
+}
+
+.note-display-info{
+    font-size: 16px;
+    color: #6b6b6b;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.note-display-btns button .fa-chevron-left{
+    font-size: 12px;
+}
+
+
+/* New note section styles */
+
+section.new-note-section{
+    padding: 2rem 24rem;
+}
+
+section.new-note-section .choose-image-label{
+    height: 350px;
+    width: 100%;
+    background-color: #212121;
+    border-radius: 20px;
+    border: 1px solid #434343;
+    color: #494949;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 0.6rem;
+    position: relative;
+}
+
+section.new-note-section .choose-image{
+    height: 350px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #434343;
+    color: transparent;
+    position: absolute;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fa-image{
+    font-size: 3rem;
+}
+
+section.new-note-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.new-note-anchor-back{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1rem 1.8rem;
+    color: black;
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.user-input-title, .user-input-info{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.user-input-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #BABABA;
+}
+
+.user-input-info{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5B5B5B;
+}
+
+
+/* Edit note sections styles */
+
+section.edit-note-section{
+    padding: 2rem 20rem;
+}
+
+
+
+section.edit-note-section .edit-image-label{
+    height: 350px;
+    width: 100%;
+    background-color: #212121;
+    border-radius: 20px;
+    border: 1px solid #434343;
+    color: #494949;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 0.6rem;
+    position: relative;
+}
+
+section.edit-note-section .edit-image{
+    height: 350px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #434343;
+    color: transparent;
+    position: absolute;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fa-image{
+    font-size: 3rem;
+}
+
+section.edit-note-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.new-note-anchor-back{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1rem 1.8rem;
+    color: black;
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit-input-title, .edit-input-info{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.edit-input-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #BABABA;
+}
+
+.edit-input-info{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5B5B5B;
+    height: 20rem;
+}
+
+.label-text{
+    color: #494949;
+}
+
+
+
+/* Responsive styles start here */
+@media (max-width: 1200px) {
+
+    .notes-container{
+        padding: 1rem 2rem;
+    }
+
+    section.notes-display .notes-list .note{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section.general-display h1{
+        font-size: 32px;
+    }
+
+    section.general-display button.new-note{
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    section.notes-display{
+        padding: 0rem 5rem;
+
+    }
+
+    .note .note-content .note-content-flex{
+        gap: 0.6rem;
+    }
+
+    .note .note-content .note-content-flex .open-note{
+        display: inline-block;
+    }
+    
+    .note .note-content .note-content-flex .edit-note, .delete-note{
+        display: inline-block;
+    }
+
+    /* new note section styles */
+    section.new-note-section{
+        padding: 1rem 5rem;
+    }
+
+    .note-display-btns button{
+        font-size: 13px;
+    }
+    
+    .new-note-anchor-back{
+        font-size: 13px;
+    }
+
+    section.new-note-section .choose-image, section.new-note-section .choose-image-label{
+        height: 250px;
+    }
+
+    .fa-image{
+        font-size: 2.5rem;
+    }
+    
+    /* display note section styles */
+
+    .note-display-section{
+        padding: 1rem 5rem;
+    }
+
+    .note-display-image{
+        height: 250px;
+    }
+
+
+    /* edit note section styles */
+
+    section.edit-note-section{
+        padding: 1rem 5rem;
+    }
+
+    section.edit-note-section .edit-image, section.edit-note-section .edit-image-label{
+        height: 250px;
+    }
+    
+}
+
+
+@media (max-width: 550px) {
+
+    .notes-container{
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    section.notes-display .notes-list .note{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section.general-display h1{
+        font-size: 26px;
+    }
+
+    section.general-display button.new-note{
+        padding: 1rem;
+        font-size: 14px;
+    }
+
+    section.notes-display{
+        padding: 0rem 1rem;
+        display: flex;
+    }
+
+    .note .note-content .note-title{
+        font-size: 20px;
+    }
+
+    .note .note-content .note-info{
+        font-size: 14px;
+    }
+
+    .note .note-content .note-date{
+        font-size: 11px;
+    }
+
+    .note .note-content .note-content-flex{
+        gap: 0.3rem;
+    }
+
+    .note .note-content .note-content-flex .open-note{
+        font-size: 10px;
+        padding: 0.3re 0.5rem;
+        display: inline-block;
+    }
+    
+    .note .note-content .note-content-flex .edit-note, .delete-note{
+        font-size: 10px;
+        display: inline-block;
+    }
+
+    /* new note sections styles */
+
+    section.new-note-section{
+        padding: 1rem;
+    }
+
+    .note-display-btns button,.new-note-anchor-back{
+        font-size: 10px;
+        padding: 0.8rem 1rem;
+    }
+
+    section.new-note-section .choose-image, section.new-note-section .choose-image-label{
+        height: 200px;
+    }
+
+    .fa-image{
+        font-size: 2rem;
+    }
+
+    .user-input-title{
+        font-size: 28px;
+    }
+    .user-input-info{
+        font-size: 14px;
+    }
+
+
+    /* display note section styles */
+
+    .note-display-section{
+        padding: 1rem;
+    }
+
+    .note-display-image{
+        height: 200px;
+    }
+
+    .note-display-title{
+        font-size: 28px;
+    }
+
+    .note-display-info{
+        font-size: 16px;
+    }
+
+    /* edit note section styles */
+
+    section.edit-note-section{
+        padding: 1rem;
+    }
+
+    section.edit-note-section .edit-image, section.edit-note-section .edit-image-label{
+        height: 200px;
+    }
+    
+    .edit-input-title{
+        font-size: 28px;
+    }
+
+    .edit-input-info{
+        font-size: 14px;
+    }
+
+    .label-text{
+        font-size: 12px;
+    }
+}
