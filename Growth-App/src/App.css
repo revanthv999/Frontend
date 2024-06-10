@@ -1,0 +1,231 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+
+.App{
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem;
+}
+
+
+/* Nav styles */
+
+.Nav{
+  position: absolute;
+  padding: 0.6rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 24px;
+  bottom: 5%;
+}
+
+.Nav .nav-btn,.Nav .nav-btn-dark{
+  padding: 0.6rem 1rem;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.Nav .nav-btn{
+  border: 1px solid #C7C7C7;
+  color: #C7C7C7;
+  background-color: white;
+}
+
+.Nav .nav-btn-dark{
+  color: #484848;
+  background-color: #202020;
+  border: 1px solid #484848;
+}
+
+.Nav .quote-btn-active{
+  border-color: #7F27FF;
+  color: #7F27FF;
+  pointer-events: none;
+}
+
+.Nav .quote-btn-active-dark{
+  border-color: #7F27FF;
+  color: #fff;
+  pointer-events: none;
+  background-color: #7F27FF;
+}
+  
+.Nav .affirmation-btn-active{
+    border-color: #0056FE;
+    color: #0056FE;
+    pointer-events: none;
+}
+
+.Nav .affirmation-btn-active-dark{
+    border-color: #0056FE;
+    color: #fff;
+    pointer-events: none;
+    background-color: #0056FE;
+}
+
+/* Quote styles */
+.Quote{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1C1C1C;
+  position: relative;
+}
+.quote-text{
+  text-align: center;
+  font-size: 30px;
+  color: #1C1C1C;
+  transition: color 0.3s;
+  z-index: 3;
+}
+  
+.quote-author{
+  text-align: right;
+  font-style: italic;
+  transition: color 0.3s;
+}
+
+.fa-quote-left{
+  position: absolute;
+  font-size: 15rem;
+  color: #EEEEEE;
+  transform: translate(-10vw, -12vw);
+}
+  
+
+/* Random btn styles */
+.quote-random-btn, .quote-random-btn-dark{
+  position: absolute;
+  bottom: 25%;
+  font-size: 1.2rem;
+  color: #7F27FF;
+  outline: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.quote-random-btn{
+  background-color: #EADFFF;
+  border: 1px solid #BA97FF;
+}
+
+.quote-random-btn-dark{
+  background-color: #2A292D;
+  border: 1px solid #7F27FF;
+}
+
+.affirmation-random-btn, .affirmation-random-btn-dark{
+  position: absolute;
+  bottom: 25%;
+  font-size: 1.2rem;
+  color: #0056FE;
+  outline: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 200px;
+  cursor: pointer;
+  transition: all 0.3s;
+  }
+  
+.affirmation-random-btn{
+  background-color: #B7D0FF;
+  border: 1px solid #0056FE;
+}
+  
+.affirmation-random-btn-dark{
+  border: 1px solid #0056FE;
+  background-color: #292E38;
+}
+
+/* Affirmation component styles */
+.Affirmation .affirmation-text{
+  color: #1C1C1C;
+  text-align: center;
+}
+
+.Affirmation .affirmation-text-dark{
+  color: #EAEAEA;
+  text-align: center;
+}
+
+/* mode button styles */
+.mode-btn{
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  left: unset;
+  bottom: unset;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.moon{
+  color: #fff;
+  background-color: #222222;
+  padding: 0.6rem 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 880px) {
+  .App{
+    padding: 2rem;
+  }
+
+  .Nav{
+    bottom: 3%;
+  }
+
+  .quote-text{
+    font-size: 1.4rem;
+  }
+
+  .quote-author{
+    font-size: 0.9rem;
+  }
+
+  .fa-quote-left{
+    transform: translate(-10vw, -25vw);
+  }
+
+  .quote-random-btn, .quote-random-btn-dark, .affirmation-random-btn, .affirmation-random-btn-dark{
+    font-size: 1rem;
+    bottom: 20%;
+  }
+
+  .affirmation-text, .affirmation-text-dark{
+    font-size: 1.6rem;
+  }
+
+  .Nav .affirmation-btn-active-dark, .Nav .affirmation-btn-active,
+  .Nav .nav-btn-dark,.Nav .nav-btn,
+  .Nav .quote-btn-active-dark,.Nav .quote-btn-active{
+    font-size: 0.7rem;
+  }
+
+  .mode-btn{
+    font-size: 1rem;
+  }
+
+}
