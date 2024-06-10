@@ -29,7 +29,7 @@ function App() {
   // Function to get an Affirmation
   const getAffirmation = async () => {
     try{
-      const response = await axios.get("https://cors-anywhere.herokuapp.com/https://www.affirmations.dev/");
+      const response = await axios.get("https://api.allorigins.win/get?url=https://www.affirmations.dev/");
       setAffirmation(response.data.affirmation);
     } catch (error) {
       console.log(error);
