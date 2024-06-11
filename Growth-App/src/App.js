@@ -27,10 +27,11 @@ function App() {
   };
 
   // Function to get an Affirmation
-   const getAffirmation = async () => {
-    try{
-      const response = await axios.get("https://api.allorigins.win/get?url=https://www.affirmations.dev/");
-      setAffirmation(response.data.contents.split(":")[1].replace("}", ""));
+  const getAffirmation = async () => {
+    try {
+      const response = await axios.get(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.affirmations.dev/')}?timestamp=${new Date().getTime()}`);
+      const data = JSON.parse(response.data.contents);
+      setAffirmation(data.affirmation);
     } catch (error) {
       console.log(error);
       setAffirmation("Error at server side. Please try again.");
